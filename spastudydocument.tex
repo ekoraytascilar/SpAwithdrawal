@@ -49,7 +49,7 @@
 \newenvironment{knitrout}{}{} % an empty environment to be redefined in TeX
 
 \usepackage{alltt}
-\title{A dietary intervention to allaviate flares after treatment reduction in SpA;\\Analysis Report}
+\title{A dietary intervention to alleviate flares after treatment reduction in SpA patients under stable low disease activity;\\Analysis Report}
 \author{Koray Taşcılar}
 
 \usepackage{booktabs}
@@ -71,10 +71,37 @@
 \usepackage[margin=2.5cm]{geometry}
 \usepackage{appendix}
 \usepackage{tikz}
+\usepackage{amsmath}
 \IfFileExists{upquote.sty}{\usepackage{upquote}}{}
 \begin{document}
 \maketitle
 
+\section{Setup and load packages}
+\begin{knitrout}
+\definecolor{shadecolor}{rgb}{0.969, 0.969, 0.969}\color{fgcolor}\begin{kframe}
+\begin{alltt}
+\hlkwd{library}\hlstd{(tidyverse)}
+\end{alltt}
+\end{kframe}
+\end{knitrout}
+
+\section {Study design}
+This is a 6-month interventional study to evaluate the effect of a high fiber dietary supplement that stimulates the production of short chain fatty acids in the gut. The study will include AS patients diagnosed on the basis of New York Criteria (1984) or axial SpA patients based on the ASAS 2009 criteria. Included patients will be required to be in stable low disease activity defined as an ASDAS score less than 1.2 in 2 consecutive visits for at least 6 months before inclusion. Study will include 3 arms, namely;
+\begin{enumerate}
+  \item Control arm that will continue the pre-study treatment. (Control group)
+  \item Intervention arm with 50\% reduction of baseline treatment and a low-fiber supplement. (LoFi group)
+  \item Intervention arm with 50\% reduction of baseline treatment and a high-fiber supplement. (HiFi group)
+\end{enumerate}
+\subsection{Primary endpoint}
+Primary outcome will be the ASDAS difference from the control arm at last follow-up.
+Patients who experience a flare (ASDAS increase by more than 0.9) in any arm are allowed to undergo a rescue treatment of their primary physician‘s choice, they will be considered as failures and the ASDAS at time of the flare will be carried forward for the final analysis.
+Primary endpoint will be the final ASDAS.
+
+\subsection{Primary hypotheses}
+
+\begin{enumerate}
+\item HiFi group will be non-inferior to the Control group defined as the single sided 95\%upper confidence limit of  $\overline{ASDAS}_{HiFi} - \overline{ASDAS}_{LoFi}$ difference will not exceed the flare definition (0.9)
+\item HiFi group will be superior to the LoFi group defined as the point estimate of the mean ASDAS in the HiFi group will be lower than the ´double sided 95\% lower confidence limit of the mean final ASDAS in the LoFi group.
 
 
 \end{document}
