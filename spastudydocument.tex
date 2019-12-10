@@ -49,7 +49,7 @@
 \newenvironment{knitrout}{}{} % an empty environment to be redefined in TeX
 
 \usepackage{alltt}
-\title{A dietary intervention to alleviate flares after treatment reduction in SpA patients under stable low disease activity;\\Analysis Report}
+\title{A dietary intervention to alleviate flares after treatment reduction for SpA patients in stable low disease activity;\\Preliminary study design and power analysis.}
 \author{Koray Taşcılar}
 
 \usepackage{booktabs}
@@ -76,7 +76,6 @@
 \begin{document}
 \maketitle
 
-\section{Setup and load packages}
 \begin{knitrout}
 \definecolor{shadecolor}{rgb}{0.969, 0.969, 0.969}\color{fgcolor}\begin{kframe}
 \begin{alltt}
@@ -86,7 +85,7 @@
 \end{knitrout}
 
 \section {Study design}
-This is a 6-month interventional study to evaluate the effect of a high fiber dietary supplement that stimulates the production of short chain fatty acids in the gut. The study will include AS patients diagnosed on the basis of New York Criteria (1984) or axial SpA patients based on the ASAS 2009 criteria. Included patients will be required to be in stable low disease activity defined as an ASDAS score less than 1.2 in 2 consecutive visits for at least 6 months before inclusion. Study will include 3 arms, namely;
+This is a 6-month interventional study to evaluate the effect of a high fiber dietary supplement that stimulates the production of short chain fatty acids in the gut. The study will include ankylosing spondylitis (AS) patients diagnosed on the basis of New York Criteria (1984) or axial spondyloarthritis (SpA) patients fulfilling the Assessment of SpondyloArthritis international Society (ASAS) 2009 criteria. Included patients will be required to be in stable low disease activity defined as an ASDAS score (Figure \ref{fig:asdas} on page \pageref{fig:asdas}) less than 1.2 in 2 consecutive visits for at least 6 months before inclusion. The ASDAS threshold defines the low disease activity as proposed by the  ASAS (Figure \ref{fig:asdasactivity} on page \pageref{fig:asdasactivity}). At baseline we might need to check whether the patients are already receiving any variant of the specific fiber (if yes in which amount) to be tested in the study and consider excluding them if necessary. Study will include 3 arms, namely;
 \begin{enumerate}
   \item Control arm that will continue the pre-study treatment. (Control group)
   \item Intervention arm with 50\% reduction of baseline treatment and a low-fiber supplement. (LoFi group)
@@ -97,11 +96,26 @@ Primary outcome will be the ASDAS difference from the control arm at last follow
 Patients who experience a flare (ASDAS increase by more than 0.9) in any arm are allowed to undergo a rescue treatment of their primary physician‘s choice, they will be considered as failures and the ASDAS at time of the flare will be carried forward for the final analysis.
 Primary endpoint will be the final ASDAS.
 
+\begin{figure}
+  \centering
+  \includegraphics[width=0.75\textwidth]{ASDAS.png}
+  \caption {Calculation of ASDAS}
+  \label{fig:asdas}
+\end{figure}
+
+\begin{figure}
+  \centering
+  \includegraphics[width=0.75\textwidth]{asdasactivity.png}
+  \caption{ASDAS thresholds for disease activity states in SpA}
+  \label{fig:asdasactivity}
+\end{figure}
+
 \subsection{Primary hypotheses}
 
 \begin{enumerate}
-\item HiFi group will be non-inferior to the Control group defined as the single sided 95\%upper confidence limit of  $\overline{ASDAS}_{HiFi} - \overline{ASDAS}_{LoFi}$ difference will not exceed the flare definition (0.9)
-\item HiFi group will be superior to the LoFi group defined as the point estimate of the mean ASDAS in the HiFi group will be lower than the ´double sided 95\% lower confidence limit of the mean final ASDAS in the LoFi group.
+\item HiFi group will be non-inferior to the Control group defined as the single sided 95\%upper confidence limit of  $\overline{ASDAS}_{HiFi} - \overline{ASDAS}_{Control}$ difference will not exceed the flare definition (0.9)
+\item HiFi group will be superior to the LoFi group defined as the point estimate of the mean ASDAS in the HiFi group will be lower than the lower limit of the ´double sided 95\% lower confidence interval for the mean final ASDAS in the LoFi group.
 
-
+\section{Preliminary Power and Sample Size}
+Based on these hypotheses, this study will make to co-primary analyses.
 \end{document}
