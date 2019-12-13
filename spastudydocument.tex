@@ -113,9 +113,62 @@ Primary endpoint will be the final ASDAS.
 \subsection{Primary hypotheses}
 
 \begin{enumerate}
-\item HiFi group will be non-inferior to the Control group defined as the single sided 95\%upper confidence limit of  $\overline{ASDAS}_{HiFi} - \overline{ASDAS}_{Control}$ difference will not exceed the flare definition (0.9)
-\item HiFi group will be superior to the LoFi group defined as the point estimate of the mean ASDAS in the HiFi group will be lower than the lower limit of the ´double sided 95\% lower confidence interval for the mean final ASDAS in the LoFi group.
+\item HiFi group will be non-inferior to the Control group defined as the single sided 95\%upper confidence limit of  $\overline{ASDAS}_{HiFi} - \overline{ASDAS}_{Control}$ difference that will not exceed the flare definition (0.9)
+\item HiFi group will be superior to the LoFi group defined as the point estimate of the mean ASDAS in the HiFi group will be out at the lower side of the ´double sided 95\% confidence interval for the mean final ASDAS in the LoFi group.
 
 \section{Preliminary Power and Sample Size}
-Based on these hypotheses, this study will make to co-primary analyses.
+Based on these hypotheses, this study will make two co-primary analyses.
+\Begin{enumerate}
+The first analysis wil include the noninferiority endpoint. Since this trial will include patients in stable remission, we need data from remission studies. In the paper by Lubrano et. al. The mean ASDAS-CRP in an AS population under remission was 1.1 with 25th and 75th percentiles of 0.6 to 1.5. Possible standard deviations that would give these quartile bounds could be as follows assuming normal distribution.
+\begin{knitrout}
+\definecolor{shadecolor}{rgb}{0.969, 0.969, 0.969}\color{fgcolor}\begin{kframe}
+\begin{alltt}
+\hlkwd{qnorm}\hlstd{(}\hlkwc{p}\hlstd{=}\hlnum{0.25}\hlstd{,}\hlkwc{mean}\hlstd{=}\hlnum{1.1}\hlstd{,} \hlkwc{sd}\hlstd{=}\hlnum{0.7}\hlstd{)}
+\end{alltt}
+\begin{verbatim}
+## [1] 0.6278572
+\end{verbatim}
+\begin{alltt}
+\hlkwd{qnorm}\hlstd{(}\hlkwc{p}\hlstd{=}\hlnum{0.75}\hlstd{,}\hlkwc{mean}\hlstd{=}\hlnum{1.1}\hlstd{,} \hlkwc{sd}\hlstd{=}\hlnum{0.6}\hlstd{)}
+\end{alltt}
+\begin{verbatim}
+## [1] 1.504694
+\end{verbatim}
+\end{kframe}
+\end{knitrout}
+
+So we could expect the standard deviation in an AS population with a mean ASDAS-CRP of 1.1 to be in the range of 0.6-0.7.
+With this assumption if we want to show non-inferiority of the HiFi intervention from the control group The power calculation will be as follows
+\begin{knitrout}
+\definecolor{shadecolor}{rgb}{0.969, 0.969, 0.969}\color{fgcolor}\begin{kframe}
+\begin{alltt}
+\hlstd{muA}\hlkwb{=}\hlnum{1.1} \hlcom{#mean in treatment group}
+\hlstd{muB}\hlkwb{=}\hlnum{1.1} \hlcom{#mean in control group}
+\hlstd{delta}\hlkwb{=}\hlnum{0.9} \hlcom{#non-inferiority margin}
+\hlstd{kappa}\hlkwb{=}\hlnum{1} \hlcom{#sampling ratio}
+\hlstd{sd}\hlkwb{=}\hlnum{0.8} \hlcom{#standard deviation}
+\hlstd{alpha}\hlkwb{=}\hlnum{0.025} \hlcom{#type 1 error}
+\hlstd{beta}\hlkwb{=}\hlnum{0.10} \hlcom{#type2 error}
+\hlstd{(nB}\hlkwb{=}\hlstd{(}\hlnum{1}\hlopt{+}\hlnum{1}\hlopt{/}\hlstd{kappa)}\hlopt{*}\hlstd{(sd}\hlopt{*}\hlstd{(}\hlkwd{qnorm}\hlstd{(}\hlnum{1}\hlopt{-}\hlstd{alpha)}\hlopt{+}\hlkwd{qnorm}\hlstd{(}\hlnum{1}\hlopt{-}\hlstd{beta))}\hlopt{/}\hlstd{(muA}\hlopt{-}\hlstd{muB}\hlopt{-}\hlstd{delta))}\hlopt{^}\hlnum{2}\hlstd{)}
+\end{alltt}
+\begin{verbatim}
+## [1] 16.60432
+\end{verbatim}
+\begin{alltt}
+\hlkwd{ceiling}\hlstd{(nB)} \hlcom{# round to the nearest integer}
+\end{alltt}
+\begin{verbatim}
+## [1] 17
+\end{verbatim}
+\begin{alltt}
+\hlstd{z}\hlkwb{=}\hlstd{(muA}\hlopt{-}\hlstd{muB}\hlopt{-}\hlstd{delta)}\hlopt{/}\hlstd{(sd}\hlopt{*}\hlkwd{sqrt}\hlstd{((}\hlnum{1}\hlopt{+}\hlnum{1}\hlopt{/}\hlstd{kappa)}\hlopt{/}\hlstd{nB))}
+\hlstd{(Power}\hlkwb{=}\hlkwd{pnorm}\hlstd{(z}\hlopt{-}\hlkwd{qnorm}\hlstd{(}\hlnum{1}\hlopt{-}\hlstd{alpha))}\hlopt{+}\hlkwd{pnorm}\hlstd{(}\hlopt{-}\hlstd{z}\hlopt{-}\hlkwd{qnorm}\hlstd{(}\hlnum{1}\hlopt{-}\hlstd{alpha)))}
+\end{alltt}
+\begin{verbatim}
+## [1] 0.9000001
+\end{verbatim}
+\end{kframe}
+\end{knitrout}
+
+So this means if we define noninferiority as the 95 \% one sided upper confidence limit of ASDAS difference not exceeding 0.9, we need to include at least 17 patients per arm for 90\% power and a one sided alpha error rate of 0.025 (Chow S, Shao J, Wang H. 2008. Sample Size Calculations in Clinical Research. 2nd Ed. Chapman & Hall/CRC Biostatistics Series.)
 \end{document}
