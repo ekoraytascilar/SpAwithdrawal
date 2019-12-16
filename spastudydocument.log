@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (MiKTeX 2.9.6960 64-bit) (preloaded format=pdflatex 2019.2.4)  13 DEC 2019 20:08
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (MiKTeX 2.9.6960 64-bit) (preloaded format=pdflatex 2019.2.4)  16 DEC 2019 10:02
 entering extended mode
 **./spastudydocument.tex
 (spastudydocument.tex
@@ -830,27 +830,18 @@ l.117 ...p will be out at the lower side of the ´
 You may provide a definition with
 \DeclareUnicodeCharacter 
 
-! Undefined control sequence.
-l.121 \Begin
-            {enumerate}
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
 
-
-Package xcolor Warning: Incompatible color definition on input line 124.
+Package xcolor Warning: Incompatible color definition on input line 127.
 
 [1
 
 {C:/Users/tascilky/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map}]
 [2 <./ASDAS.png> <./asdasactivity.png>]
 
-Package xcolor Warning: Incompatible color definition on input line 143.
+Package xcolor Warning: Incompatible color definition on input line 146.
 
 ! Misplaced alignment tab character &.
-l.173 ...s in Clinical Research. 2nd Ed. Chapman &
+l.176 ...s in Clinical Research. 2nd Ed. Chapman &
                                                    Hall/CRC Biostatistics Se...
 I can't figure out why you would want to use a tab mark
 here. If you just want an ampersand, the remedy is
@@ -859,47 +850,39 @@ up above has ended a previous alignment prematurely,
 you're probably due for more error messages, and you
 might try typing `S' now just to see what is salvageable.
 
+
+Package xcolor Warning: Incompatible color definition on input line 182.
+
 [3]
-
-! LaTeX Error: \begin{enumerate} on input line 115 ended by \end{document}.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.174 \end{document}
-                    
-Your command was ignored.
-Type  I <command> <return>  to replace it with another command,
-or  <return>  to continue without it.
-
-(spastudydocument.aux) )
-(\end occurred inside a group at level 1)
-
-### semi simple group (level 1) entered at line 115 (\begingroup)
-### bottom level 
+<studyoutline.png, id=28, 907.2294pt x 489.9906pt>
+File: studyoutline.png Graphic file (type png)
+<use studyoutline.png>
+Package pdftex.def Info: studyoutline.png  used on input line 217.
+(pdftex.def)             Requested size: 566.43604pt x 305.93683pt.
+ [4 <./studyoutline.png>] (spastudydocument.aux) ) 
 Here is how much of TeX's memory you used:
- 14339 strings out of 492942
- 280532 string characters out of 3124756
- 333964 words of memory out of 3000000
- 17913 multiletter control sequences out of 15000+200000
+ 14345 strings out of 492942
+ 280649 string characters out of 3124756
+ 336972 words of memory out of 3000000
+ 17918 multiletter control sequences out of 15000+200000
  9157 words of font info for 35 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
- 55i,8n,48p,1072b,322s stack positions out of 5000i,500n,10000p,200000b,50000s
-<C:/Users/tascilky/AppData/Local/Programs/MiKTeX 2.9/fonts/type
-1/public/amsfonts/cm/cmbx12.pfb><C:/Users/tascilky/AppData/Local/Programs/MiKTe
-X 2.9/fonts/type1/public/amsfonts/cm/cmitt10.pfb><C:/Users/tascilky/AppData/Loc
-al/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Users/tasc
-ilky/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi7.pfb
+ 55i,10n,48p,1072b,265s stack positions out of 5000i,500n,10000p,200000b,50000s
+<C:/Users/tascilky/AppData/Lo
+cal/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx12.pfb><C:/Users/tas
+cilky/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmitt10.
+pfb><C:/Users/tascilky/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/ams
+fonts/cm/cmmi10.pfb><C:/Users/tascilky/AppData/Local/Programs/MiKTeX 2.9/fonts/
+type1/public/amsfonts/cm/cmmi7.pfb><C:/Users/tascilky/AppData/Local/Programs/Mi
+KTeX 2.9/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Users/tascilky/AppData/Lo
+cal/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Users/tasc
+ilky/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr17.pfb
 ><C:/Users/tascilky/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfon
-ts/cm/cmr10.pfb><C:/Users/tascilky/AppData/Local/Programs/MiKTeX 2.9/fonts/type
-1/public/amsfonts/cm/cmr12.pfb><C:/Users/tascilky/AppData/Local/Programs/MiKTeX
- 2.9/fonts/type1/public/amsfonts/cm/cmr17.pfb><C:/Users/tascilky/AppData/Local/
-Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/tascilk
-y/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmtt10.pfb>
-Output written on spastudydocument.pdf (3 pages, 632840 bytes).
+ts/cm/cmsy10.pfb><C:/Users/tascilky/AppData/Local/Programs/MiKTeX 2.9/fonts/typ
+e1/public/amsfonts/cm/cmtt10.pfb>
+Output written on spastudydocument.pdf (4 pages, 738278 bytes).
 PDF statistics:
- 56 PDF objects out of 1000 (max. 8388607)
+ 61 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
- 23 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 28 words of extra memory for PDF output out of 10000 (max. 10000000)
 

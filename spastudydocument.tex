@@ -98,7 +98,7 @@ Primary endpoint will be the final ASDAS.
 
 \begin{figure}
   \centering
-  \includegraphics[width=0.75\textwidth]{ASDAS.png}
+  \frame{\includegraphics[width=0.75\textwidth]{ASDAS.png}}
   \caption {Calculation of ASDAS}
   \label{fig:asdas}
 \end{figure}
@@ -115,10 +115,13 @@ Primary endpoint will be the final ASDAS.
 \begin{enumerate}
 \item HiFi group will be non-inferior to the Control group defined as the single sided 95\%upper confidence limit of  $\overline{ASDAS}_{HiFi} - \overline{ASDAS}_{Control}$ difference that will not exceed the flare definition (0.9)
 \item HiFi group will be superior to the LoFi group defined as the point estimate of the mean ASDAS in the HiFi group will be out at the lower side of the ´double sided 95\% confidence interval for the mean final ASDAS in the LoFi group.
+\end{enumerate}
 
 \section{Preliminary Power and Sample Size}
+
 Based on these hypotheses, this study will make two co-primary analyses.
-\Begin{enumerate}
+
+\subsection{Non-inferiority outcome}
 The first analysis wil include the noninferiority endpoint. Since this trial will include patients in stable remission, we need data from remission studies. In the paper by Lubrano et. al. The mean ASDAS-CRP in an AS population under remission was 1.1 with 25th and 75th percentiles of 0.6 to 1.5. Possible standard deviations that would give these quartile bounds could be as follows assuming normal distribution.
 \begin{knitrout}
 \definecolor{shadecolor}{rgb}{0.969, 0.969, 0.969}\color{fgcolor}\begin{kframe}
@@ -170,5 +173,49 @@ With this assumption if we want to show non-inferiority of the HiFi intervention
 \end{kframe}
 \end{knitrout}
 
-So this means if we define noninferiority as the 95 \% one sided upper confidence limit of ASDAS difference not exceeding 0.9, we need to include at least 17 patients per arm for 90\% power and a one sided alpha error rate of 0.025 (Chow S, Shao J, Wang H. 2008. Sample Size Calculations in Clinical Research. 2nd Ed. Chapman & Hall/CRC Biostatistics Series.)
+So this means if we define noninferiority as the 97.5 \% one sided upper confidence limit of ASDAS difference not exceeding 0.9, we need to include at least 17 patients per arm for 90\% power and a one sided alpha error rate of 0.025 (Chow S, Shao J, Wang H. 2008. Sample Size Calculations in Clinical Research. 2nd Ed. Chapman & Hall/CRC Biostatistics Series.). We assumed a pessimistic scenario and that the standard deviation would be higher than observed. If we assume a 25\% droup out rate the per group sample size should be at least 23 per group for the non-inferiority study.
+
+\subsection{Superiority outcome}
+
+The second hypothesis in this study is that the final ASDAS in the HiFi group will be better than that in the LoFi group. In order to detect a mean difference of 0.9 between groups assuming a standard deviation of 0.9 and a control group mean ASDAS of 1.1 with 90\%power and a two sided alpha error rate of 0.025 the required sample size would be calculated as follows.
+\begin{knitrout}
+\definecolor{shadecolor}{rgb}{0.969, 0.969, 0.969}\color{fgcolor}\begin{kframe}
+\begin{alltt}
+\hlstd{muA}\hlkwb{=}\hlnum{1.1} \hlcom{#Expected mean ASDAS at study end in the HiFi group}
+\hlstd{muB}\hlkwb{=}\hlnum{2.0} \hlcom{#Expected mean ASDAS at study end in the LoFi group}
+\hlstd{kappa}\hlkwb{=}\hlnum{1} \hlcom{#Enrollment ratio 1:1}
+\hlstd{sd}\hlkwb{=}\hlnum{0.9} \hlcom{# Expected standard deviation}
+\hlstd{alpha}\hlkwb{=}\hlnum{0.025} \hlcom{#Two sided alpha error rate}
+\hlstd{beta}\hlkwb{=}\hlnum{0.10} \hlcom{#Beta error rate}
+\hlstd{(nB}\hlkwb{=}\hlstd{(}\hlnum{1}\hlopt{+}\hlnum{1}\hlopt{/}\hlstd{kappa)}\hlopt{*}\hlstd{(sd}\hlopt{*}\hlstd{(}\hlkwd{qnorm}\hlstd{(}\hlnum{1}\hlopt{-}\hlstd{alpha}\hlopt{/}\hlnum{2}\hlstd{)}\hlopt{+}\hlkwd{qnorm}\hlstd{(}\hlnum{1}\hlopt{-}\hlstd{beta))}\hlopt{/}\hlstd{(muA}\hlopt{-}\hlstd{muB))}\hlopt{^}\hlnum{2}\hlstd{)}
+\end{alltt}
+\begin{verbatim}
+## [1] 24.82241
+\end{verbatim}
+\begin{alltt}
+\hlkwd{ceiling}\hlstd{(nB)} \hlcom{# round to the nearest integer}
+\end{alltt}
+\begin{verbatim}
+## [1] 25
+\end{verbatim}
+\begin{alltt}
+\hlstd{z}\hlkwb{=}\hlstd{(muA}\hlopt{-}\hlstd{muB)}\hlopt{/}\hlstd{(sd}\hlopt{*}\hlkwd{sqrt}\hlstd{((}\hlnum{1}\hlopt{+}\hlnum{1}\hlopt{/}\hlstd{kappa)}\hlopt{/}\hlstd{nB))}
+\hlstd{(Power}\hlkwb{=}\hlkwd{pnorm}\hlstd{(z}\hlopt{-}\hlkwd{qnorm}\hlstd{(}\hlnum{1}\hlopt{-}\hlstd{alpha}\hlopt{/}\hlnum{2}\hlstd{))}\hlopt{+}\hlkwd{pnorm}\hlstd{(}\hlopt{-}\hlstd{z}\hlopt{-}\hlkwd{qnorm}\hlstd{(}\hlnum{1}\hlopt{-}\hlstd{alpha}\hlopt{/}\hlnum{2}\hlstd{)))}
+\end{alltt}
+\begin{verbatim}
+## [1] 0.9
+\end{verbatim}
+\end{kframe}
+\end{knitrout}
+
+Meaning that for the superiority comparison we need at least 25 patients per each arm. Again allowing a dropout rate of 25\% the number of patients to be enrolled would be at least 34 per arm.
+
+With a one to one randomization ratio for each arm we could estimate the total number as thrice the highest estimated sample size and that makes 112 participants to be randomized to three study arms. Overall study outline is depicted in Figure \ref{fig:studyoutline} on page \pageref{fig:studyoutline}
+
+\begin{figure}
+  \centering
+  \noindent\makebox[\textwidth]{\frame{\includegraphics[width=1.2\textwidth]{studyoutline.png}}}
+  \caption {Summary of study design and study procedures.}
+  \label{fig:studyoutline}
+\end{figure}
 \end{document}

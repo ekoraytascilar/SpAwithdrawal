@@ -30,7 +30,7 @@ library(tidyverse)
 @
 
 \section {Study design}
-This is a 6-month interventional study to evaluate the effect of a high fiber dietary supplement that stimulates the production of short chain fatty acids in the gut. The study will include ankylosing spondylitis (AS) patients diagnosed on the basis of New York Criteria (1984) or axial spondyloarthritis (SpA) patients fulfilling the Assessment of SpondyloArthritis international Society (ASAS) 2009 criteria. Included patients will be required to be in stable low disease activity defined as an ASDAS score (Figure \ref{fig:asdas} on page \pageref{fig:asdas}) less than 1.2 in 2 consecutive visits for at least 6 months before inclusion. The ASDAS threshold defines the low disease activity as proposed by the  ASAS (Figure \ref{fig:asdasactivity} on page \pageref{fig:asdasactivity}). At baseline we might need to check whether the patients are already receiving any variant of the specific fiber (if yes in which amount) to be tested in the study and consider excluding them if necessary. Study will include 3 arms, namely;
+This is a 6-month interventional study to evaluate the effect of a high fiber dietary supplement that stimulates the production of short chain fatty acids in the gut. The study will include ankylosing spondylitis (AS) patients diagnosed on the basis of New York Criteria (1984) or axial spondyloarthritis (SpA) patients fulfilling the Assessment of SpondyloArthritis international Society (ASAS) 2009 criteria. Included patients will be required to be in stable low disease activity defined as an ASDAS score (Figure \ref{fig:asdas} on page \pageref{fig:asdas}) less than 1.3 in 2 consecutive visits for at least 6 months before inclusion. The ASDAS threshold defines the low disease activity as proposed by the  ASAS (Figure \ref{fig:asdasactivity} on page \pageref{fig:asdasactivity}). At baseline we might need to check whether the patients are already receiving any variant of the specific fiber (if yes in which amount) to be tested in the study and consider excluding them if necessary. Study will include 3 arms, namely;
 \begin{enumerate}
   \item Control arm that will continue the pre-study treatment. (Control group)
   \item Intervention arm with 50\% reduction of baseline treatment and a low-fiber supplement. (LoFi group)
@@ -43,7 +43,7 @@ Primary endpoint will be the final ASDAS.
 
 \begin{figure}
   \centering
-  \includegraphics[width=0.75\textwidth]{ASDAS.png}
+  \frame{\includegraphics[width=0.75\textwidth]{ASDAS.png}}
   \caption {Calculation of ASDAS}
   \label{fig:asdas}
 \end{figure}
@@ -58,12 +58,15 @@ Primary endpoint will be the final ASDAS.
 \subsection{Primary hypotheses}
 
 \begin{enumerate}
-\item HiFi group will be non-inferior to the Control group defined as the single sided 95\%upper confidence limit of  $\overline{ASDAS}_{HiFi} - \overline{ASDAS}_{Control}$ difference that will not exceed the flare definition (0.9)
-\item HiFi group will be superior to the LoFi group defined as the point estimate of the mean ASDAS in the HiFi group will be out at the lower side of the ´double sided 95\% confidence interval for the mean final ASDAS in the LoFi group.
+\item HiFi group will be non-inferior to the Control group defined as the single sided 97.5\%upper confidence limit of  $\overline{ASDAS}_{HiFi} - \overline{ASDAS}_{Control}$ difference that will not exceed the flare definition (0.9)
+\item HiFi group will be superior to the LoFi group defined as the point estimate of the mean ASDAS in the HiFi group will be out at the lower side of the ´double sided 97.5\% confidence interval for the mean final ASDAS in the LoFi group.
+\end{enumerate}
 
 \section{Preliminary Power and Sample Size}
+
 Based on these hypotheses, this study will make two co-primary analyses.
-\Begin{enumerate}
+
+\subsection{Non-inferiority outcome}
 The first analysis wil include the noninferiority endpoint. Since this trial will include patients in stable remission, we need data from remission studies. In the paper by Lubrano et. al. The mean ASDAS-CRP in an AS population under remission was 1.1 with 25th and 75th percentiles of 0.6 to 1.5. Possible standard deviations that would give these quartile bounds could be as follows assuming normal distribution.
 <<possiblesds>>=
 qnorm(p=0.25,mean=1.1, sd=0.7)
@@ -88,5 +91,32 @@ z=(muA-muB-delta)/(sd*sqrt((1+1/kappa)/nB))
 
 @
 
-So this means if we define noninferiority as the 95 \% one sided upper confidence limit of ASDAS difference not exceeding 0.9, we need to include at least 17 patients per arm for 90\% power and a one sided alpha error rate of 0.025 (Chow S, Shao J, Wang H. 2008. Sample Size Calculations in Clinical Research. 2nd Ed. Chapman & Hall/CRC Biostatistics Series.). We assumed a pessimistic scenario and that the standard deviation would be higher than observed. If we assume a 25\% droup out rate the per group sample size should be 23
+So this means if we define noninferiority as the 97.5 \% one sided upper confidence limit of ASDAS difference not exceeding 0.9, we need to include at least 17 patients per arm for 90\% power and a one sided alpha error rate of 0.025 (Chow S, Shao J, Wang H. 2008. Sample Size Calculations in Clinical Research. 2nd Ed. Chapman & Hall/CRC Biostatistics Series.). We assumed a pessimistic scenario and that the standard deviation would be higher than observed. If we assume a 25\% droup out rate the per group sample size should be at least 23 per group for the non-inferiority study.
+
+\subsection{Superiority outcome}
+
+The second hypothesis in this study is that the final ASDAS in the HiFi group will be better than that in the LoFi group. In order to detect a mean difference of 0.9 between groups assuming a standard deviation of 0.9 and a control group mean ASDAS of 1.1 with 90\%power and a two sided alpha error rate of 0.025 the required sample size would be calculated as follows.
+<<superioritysamplesize>>=
+muA=1.1 #Expected mean ASDAS at study end in the HiFi group
+muB=2.0 #Expected mean ASDAS at study end in the LoFi group
+kappa=1 #Enrollment ratio 1:1
+sd=0.9 # Expected standard deviation
+alpha=0.025 #Two sided alpha error rate
+beta=0.10 #Beta error rate
+(nB=(1+1/kappa)*(sd*(qnorm(1-alpha/2)+qnorm(1-beta))/(muA-muB))^2)
+ceiling(nB) # round to the nearest integer
+z=(muA-muB)/(sd*sqrt((1+1/kappa)/nB))
+(Power=pnorm(z-qnorm(1-alpha/2))+pnorm(-z-qnorm(1-alpha/2)))
+@
+
+Meaning that for the superiority comparison we need at least 25 patients per each arm. Again allowing a dropout rate of 25\% the number of patients to be enrolled would be at least 34 per arm.
+
+With a one to one randomization ratio for each arm we could estimate the total number as thrice the highest estimated sample size and that makes 112 participants to be randomized to three study arms. Overall study outline is depicted in Figure \ref{fig:studyoutline} on page \pageref{fig:studyoutline}
+
+\begin{figure}
+  \centering
+  \noindent\makebox[\textwidth]{\frame{\includegraphics[width=1.2\textwidth]{studyoutline.png}}}
+  \caption {Summary of study design and study procedures.}
+  \label{fig:studyoutline}
+\end{figure}
 \end{document}
