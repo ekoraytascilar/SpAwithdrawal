@@ -67,7 +67,7 @@ Primary endpoint will be the final ASDAS.
 Based on these hypotheses, this study will make two co-primary analyses.
 
 \subsection{Non-inferiority outcome}
-The first analysis wil include the noninferiority endpoint. Since this trial will include patients in stable remission, we need data from remission studies. In the paper by Lubrano et. al. The mean ASDAS-CRP in an AS population under remission was 1.1 with 25th and 75th percentiles of 0.6 to 1.5. Possible standard deviations that would give these quartile bounds could be as follows assuming normal distribution.
+The first analysis wil include the noninferiority endpoint. Since this trial will include patients in stable remission, we need data from remission studies. In the paper by Lubrano et. al. (J Rheumatol 2016;43;1541-1546) The mean ASDAS-CRP in an AS population under remission was 1.1 with 25th and 75th percentiles of 0.6 to 1.5. Possible standard deviations that would give these quartile bounds could be as follows assuming normal distribution.
 <<possiblesds>>=
 qnorm(p=0.25,mean=1.1, sd=0.7)
 
