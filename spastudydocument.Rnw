@@ -115,14 +115,18 @@ z=(muA-muB)/(sd*sqrt((1+1/kappa)/nB))
 
 Meaning that for the superiority comparison we need at least 25 patients per each arm. Again allowing a dropout rate of 25\% the number of patients to be enrolled would be at least 34 per arm.
 
-With a one to one randomization ratio for each arm we could estimate the total number as thrice the highest estimated sample size and that makes 112 participants to be randomized to three study arms. Overall study outline is depicted in Figure \ref{fig:studyoutline} on page \pageref{fig:studyoutline}
+With a one to one randomization ratio for each arm we could estimate the total number as thrice the highest estimated sample size and that makes 102 participants to be randomized to three study arms. Overall study outline is depicted in Figure \ref{fig:studyoutline} on page \pageref{fig:studyoutline}
 
 \begin{figure}
   \centering
 
-  \noindent\makebox[\textwidth]{\frame{\includegraphics[width=1.2\textwidth]{studyoutline.png}}}
+  \noindent\makebox[\textwidth]{\includegraphics[width=1.2\textwidth]{studyoutline.png}}
 
   \caption {Summary of study design and study procedures.}
   \label{fig:studyoutline}
 \end{figure}
+
+
+
+
 \end{document}
