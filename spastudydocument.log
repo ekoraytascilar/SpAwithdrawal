@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 This is pdfTeX, Version 3.14159265-2.6-1.40.20 (MiKTeX 2.9.6960 64-bit) (preloaded format=pdflatex 2019.2.4)  16 DEC 2019 10:20
+=======
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (MiKTeX 2.9.6960 64-bit) (preloaded format=pdflatex 2019.2.4)  16 DEC 2019 09:51
+>>>>>>> 01991af6bc72548d39e110ae0c95a14299f70338
 entering extended mode
 **./spastudydocument.tex
 (spastudydocument.tex
@@ -858,7 +862,11 @@ Package xcolor Warning: Incompatible color definition on input line 182.
 File: studyoutline.png Graphic file (type png)
 <use studyoutline.png>
 Package pdftex.def Info: studyoutline.png  used on input line 217.
+<<<<<<< HEAD
 (pdftex.def)             Requested size: 566.43604pt x 305.93683pt.
+=======
+(pdftex.def)             Requested size: 472.03123pt x 254.93863pt.
+>>>>>>> 01991af6bc72548d39e110ae0c95a14299f70338
  [4 <./studyoutline.png>] (spastudydocument.aux) ) 
 Here is how much of TeX's memory you used:
  14345 strings out of 492942
@@ -867,7 +875,11 @@ Here is how much of TeX's memory you used:
  17918 multiletter control sequences out of 15000+200000
  9157 words of font info for 35 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
+<<<<<<< HEAD
  55i,10n,48p,1072b,265s stack positions out of 5000i,500n,10000p,200000b,50000s
+=======
+ 55i,9n,48p,1072b,253s stack positions out of 5000i,500n,10000p,200000b,50000s
+>>>>>>> 01991af6bc72548d39e110ae0c95a14299f70338
 <C:/Users/tascilky/AppData/Lo
 cal/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx12.pfb><C:/Users/tas
 cilky/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmitt10.
@@ -880,7 +892,11 @@ ilky/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr17.pfb
 ><C:/Users/tascilky/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfon
 ts/cm/cmsy10.pfb><C:/Users/tascilky/AppData/Local/Programs/MiKTeX 2.9/fonts/typ
 e1/public/amsfonts/cm/cmtt10.pfb>
+<<<<<<< HEAD
 Output written on spastudydocument.pdf (4 pages, 738346 bytes).
+=======
+Output written on spastudydocument.pdf (4 pages, 738190 bytes).
+>>>>>>> 01991af6bc72548d39e110ae0c95a14299f70338
 PDF statistics:
  61 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
